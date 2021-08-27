@@ -22,13 +22,13 @@ class login_screen extends StatelessWidget {
             ),
             padding: pad,
           ),
-          Center(
-            child: Container(
-              color: Colors.black,
-              width: 100,
-              height: 100,
-            ),
-          )
+          // Center(
+          //   child: Container(
+          //     color: Colors.black,
+          //     width: 100,
+          //     height: 100,
+          //   ),
+          // )
         ],
       ),
       floatingActionButton: FloatingActionButton(
