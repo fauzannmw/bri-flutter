@@ -5,34 +5,40 @@ class login_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(165, 162, 221, 1),
       body: Column(
         children: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.arrow_back_ios,
-              size: 25,
+          Container(
+            padding: EdgeInsets.only(top: 30),
+            child: FloatingActionButton(
+              backgroundColor: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.only(left: 6),
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  size: 20,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {
+                // setState(() {});
+              },
             ),
-            padding: pad,
           ),
-          Padding(
+          SizedBox(
+            height: 10,
+          ),
+          Container(
             child: Text(
               'Masuk',
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(
+                  fontFamily: "Nunito",
+                  fontSize: 24,
+                  color: Color.fromRGBO(242, 247, 255, 1)),
             ),
             padding: pad,
           ),
-          // Center(
-          //   child: Container(
-          //     color: Colors.black,
-          //     width: 100,
-          //     height: 100,
-          //   ),
-          // )
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
       ),
     );
   }

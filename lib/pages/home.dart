@@ -36,9 +36,7 @@ class _HomeState extends State<Home> {
               size: 20,
             ),
             onPressed: () {
-              setState(() {
-                
-              });
+              setState(() {});
             },
           ),
         ),
