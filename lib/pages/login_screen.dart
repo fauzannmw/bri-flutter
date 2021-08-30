@@ -7,12 +7,12 @@ class login_screen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromRGBO(165, 162, 221, 1),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.only(top: 30),
             child: FloatingActionButton(
               backgroundColor: Colors.white,
-              child: Padding(
+              child: Container(
                 padding: EdgeInsets.only(left: 6),
                 child: Icon(
                   Icons.arrow_back_ios,
@@ -24,6 +24,7 @@ class login_screen extends StatelessWidget {
                 // setState(() {});
               },
             ),
+            padding: pad,
           ),
           SizedBox(
             height: 10,
@@ -33,7 +34,8 @@ class login_screen extends StatelessWidget {
               'Masuk',
               style: TextStyle(
                   fontFamily: "Nunito",
-                  fontSize: 24,
+                  fontSize: 48,
+                  fontWeight: FontWeight.w900,
                   color: Color.fromRGBO(242, 247, 255, 1)),
             ),
             padding: pad,
