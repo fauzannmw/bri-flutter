@@ -1,3 +1,4 @@
+import 'package:bri_flutter/landing_page/landing_page_screen.dart';
 import 'package:bri_flutter/pages/home.dart';
 import 'package:bri_flutter/pages/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity),
-      home: login_screen(),
+      home: landing_page_screen(),
       debugShowCheckedModeBanner: false,
     );
   }
