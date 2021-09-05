@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity),
-      home: KonsultasiScreen(),
+      home: login_screen(),
       debugShowCheckedModeBanner: false,
     );
   }
