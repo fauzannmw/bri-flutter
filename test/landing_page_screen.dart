@@ -1,5 +1,4 @@
 import 'package:bri_flutter/landing_page/singkatan/short.dart';
-import 'package:bri_flutter/pages/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -314,20 +313,20 @@ class _landing_page_screenState extends State<landing_page_screen> {
                 )
               },
 
-              //TOMBOL DIBAWAH (next sama back), TERPISAH SAMA IF
+              //TOMBOL DIBAWAH, TERPISAH SAMA IF
               Container(
                 alignment: Alignment.bottomRight,
                 padding: EdgeInsets.only(right: 30, bottom: 32),
-                child: Stack(
-                  children: [
-                    if (countlanding == 1) ...{
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            countlanding += 1;
-                          });
-                        },
-                        child: Container(
+                child: InkWell(
+                  onTap: () {
+                    setState(() {
+                      countlanding += 1;
+                    });
+                  },
+                  child: Stack(
+                    children: [
+                      if (countlanding == 1) ...{
+                        Container(
                           width: 211,
                           height: 43,
                           decoration: BoxDecoration(
@@ -362,15 +361,8 @@ class _landing_page_screenState extends State<landing_page_screen> {
                             ],
                           ),
                         ),
-                      )
-                    } else if (countlanding < 5) ...{
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            countlanding += 1;
-                          });
-                        },
-                        child: Container(
+                      } else if (countlanding < 5) ...{
+                        Container(
                           width: 104,
                           height: 43,
                           decoration: BoxDecoration(
@@ -405,17 +397,8 @@ class _landing_page_screenState extends State<landing_page_screen> {
                             ],
                           ),
                         ),
-                      )
-                    } else if (countlanding == 5) ...{
-                      //navigation ke login screen
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return login_screen();
-                          }));
-                        },
-                        child: Container(
+                      } else if (countlanding == 5) ...{
+                        Container(
                           width: 104,
                           height: 43,
                           decoration: BoxDecoration(
@@ -450,12 +433,11 @@ class _landing_page_screenState extends State<landing_page_screen> {
                             ],
                           ),
                         ),
-                      )
-                    }
-                  ],
+                      }
+                    ],
+                  ),
                 ),
               ),
-              //tombol back
               if (countlanding > 1) ...{
                 Container(
                   alignment: Alignment.bottomLeft,
