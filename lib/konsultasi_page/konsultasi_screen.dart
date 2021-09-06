@@ -1,3 +1,4 @@
+import 'package:bri_flutter/konsultasi_page/detail_konsultasi.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:bri_flutter/pages/profile.dart';
@@ -27,7 +28,7 @@ class _KonsultasiScreenState extends State<KonsultasiScreen> {
             title: Padding(
               padding: const EdgeInsets.only(top: 30),
               child: Text(
-                'Marketplace',
+                'Konsultasi',
                 style: TextStyle(
                     color: Color.fromRGBO(100, 80, 80, 1),
                     fontFamily: "Nunito",
@@ -185,7 +186,14 @@ class _KonsultasiScreenState extends State<KonsultasiScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    setState(() {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return DetailKonsultasi();
+                      }));
+                    });
+                  },
                   child: Container(
                     width: screenwidth,
                     height: 132,
